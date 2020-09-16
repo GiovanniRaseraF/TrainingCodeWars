@@ -140,13 +140,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Basic_Mathematical_Operations.cpp" />
+    <ClCompile Include="ConvertaNumbertoString.cpp" />
     <ClCompile Include="Count_of_positives_sum_of_negatives.cpp" />
     <ClCompile Include="Disemvowel_Trolls.cpp" />
     <ClCompile Include="Functionhelloworld.cpp" />
     <ClCompile Include="Highest_and_Lowest.cpp" />
+    <ClCompile Include="Isthisatriangle.cpp" />
     <ClCompile Include="Reversed_Strings.cpp" />
     <ClCompile Include="ReverseString.cpp" />
     <ClCompile Include="RomanNumbers.cpp" />
+    <ClCompile Include="Asquareofsquares.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
