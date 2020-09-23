@@ -8,42 +8,47 @@
 #include <algorithm>
 using namespace std;
 
-vector<int> josephus_ric(vector<int> items, int elem, int increment,vector<int> &ret) {
+
+vector<int> j_alter(vector<int> items, int k, int increment, vector<int>& ret) {
 	//Caso base
-	if (items.size() < increment) {
-		for (auto i : items) ret.push_back(i);
+	//if (items.empty()) return ret;
+	if (items.size() == 1) {
+		ret.push_back(items[0]);
 		return ret;
 	}
-	
-	//Valcolo dove si trova l'elemento da eliminare
-	int len_items = items.size();
-	vector<int>::iterator iterator_elem_to_delete = std::find(items.begin(), items.end(), elem);
-	int pos_to_delete = std::distance(items.begin(), iterator_elem_to_delete);
-	int pos_next_elem = (pos_to_delete + increment) % len_items;
-	int next_elem = items[pos_next_elem];
-	
-	cout << "pos_to_delete: " << pos_to_delete << " pos_next_item: " << pos_next_elem << endl;
-	for (auto i : items) cout << i << " ";
-	cout << endl;
-	
-	//Eliminazione dell'elemento e inserimento nella lista di ritorno
-	items.erase(items.begin()+pos_to_delete);
-	ret.push_back(elem);
 
-	//Chiamata ricorsiva
-	return josephus_ric(items, next_elem, increment, ret);
+	//Trovo l'elemeto da eliminare alla D esima chiamata ricorsiva
+	int len = items.size();
+	int pos_to_delete = ((k-1) % len);
+	//cout << "pos_to_delete: " << pos_to_delete << endl;
+
+	int elem_deleted = items[pos_to_delete];
+	ret.push_back(elem_deleted);
+	items.erase(items.begin()+pos_to_delete);
+
+	return j_alter(items, pos_to_delete+increment, increment, ret);
 }
+
 
 vector<int> josephus(vector<int> items, int k) {
 	vector<int> ret{};
-	return josephus_ric(items, k, k, ret);
+	
+	//Debug
+	/*
+	cout << "In: ";
+	for (auto i : items) cout << i << " ";
+	cout << endl;
+	cout << "k: " << k << " Len: " << items.size() << endl;
+	*/
+	return j_alter(items, k, k, ret);
 }
 
 int main() {
 	cout << "Finale: ";
-	for (auto i : josephus({ 1, 2, 3, 4, 5, 6, 7 }, 3)) {
+	for (auto i : josephus({ 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 }, 59)) {
 		cout<<i<<" ";
 	}
 	cout<<endl;
 }
+
 
