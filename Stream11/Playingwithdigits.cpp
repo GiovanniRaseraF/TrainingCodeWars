@@ -16,7 +16,7 @@ public:
 		//Trasformo il numero in stringa per andare meglio
 		string str_number = to_string(number);
 		//Calcolo n * k
-		int number_k = 0, k = 0;
+		//int number_k = 0, k = 0;
 		for (char n : str_number) {
 			number_k += pow((int)n - (int)'0', power);
 			power++;
