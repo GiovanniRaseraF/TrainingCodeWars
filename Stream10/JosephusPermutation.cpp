@@ -9,18 +9,13 @@
 using namespace std;
 
 
-vector<int> j_alter(vector<int> items, int k, int increment, vector<int>& ret) {
+vector<int> j_alter(vector<int>& items, int k, int increment, vector<int>& ret) {
 	//Caso base
-	//if (items.empty()) return ret;
-	if (items.size() == 1) {
-		ret.push_back(items[0]);
-		return ret;
-	}
+	if (items.empty()) return ret;
 
 	//Trovo l'elemeto da eliminare alla D esima chiamata ricorsiva
 	int len = items.size();
 	int pos_to_delete = ((k-1) % len);
-	//cout << "pos_to_delete: " << pos_to_delete << endl;
 
 	int elem_deleted = items[pos_to_delete];
 	ret.push_back(elem_deleted);
@@ -32,14 +27,6 @@ vector<int> j_alter(vector<int> items, int k, int increment, vector<int>& ret) {
 
 vector<int> josephus(vector<int> items, int k) {
 	vector<int> ret{};
-	
-	//Debug
-	/*
-	cout << "In: ";
-	for (auto i : items) cout << i << " ";
-	cout << endl;
-	cout << "k: " << k << " Len: " << items.size() << endl;
-	*/
 	return j_alter(items, k, k, ret);
 }
 
