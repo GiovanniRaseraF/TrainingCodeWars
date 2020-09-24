@@ -1,10 +1,10 @@
-# TrainingCodeWars
- - Streaming OGNI GIORNO su TWITCH
- - https://www.twitch.tv/giorsrlwo
+# Training Code Wars
+ - Streaming "OGNI GIORNO" su TWITCH
+ - [giorsrlwo](https://www.twitch.tv/giorsrlwo)
  - Riguarda su Youtube
- - https://www.youtube.com/channel/UCRJvY74tiHlVo78ZrBEz13w
+ - [Ciao Mondo](https://www.youtube.com/channel/UCRJvY74tiHlVo78ZrBEz13w)
  - CodeWars
- - https://www.codewars.com/users/giovanniraserafarra
+ - [giovanniraserafarra](https://www.codewars.com/users/giovanniraserafarra)
 
 # Descrizione
 - [Stream 11]()
