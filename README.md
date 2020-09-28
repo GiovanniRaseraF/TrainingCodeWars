@@ -7,7 +7,11 @@
  - [giovanniraserafarra](https://www.codewars.com/users/giovanniraserafarra)
 
 # Descrizione
-- [Stream 11]()
+- [Stream 12](https://www.youtube.com/watch?v=rbAAwXVXC_8)
+    - [Path Finder #1: can you reach the exit?](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
+    - [Pick peaks](https://www.codewars.com/kata/5279f6fe5ab7f447890006a7)
+
+- [Stream 11](https://youtu.be/UYKXoIziOys)
     - [Playing with digits](https://www.codewars.com/kata/5552101f47fc5178b1000050)
 
 - [Stream 10](https://www.youtube.com/watch?v=PZnoCHCeBkU)
