@@ -7,7 +7,12 @@
  - [giovanniraserafarra](https://www.codewars.com/users/giovanniraserafarra)
 
 # Descrizione
-- [Stream 14]()
+
+- [Stream 15](https://youtu.be/1HpwYw8crsw)
+    - [Path Finder #1: can you reach the exit? FALLIMENTO NEL MIGLIORAMENTO](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
+    - [Explosive Sum NON RISOLTO](https://www.codewars.com/kata/52ec24228a515e620b0005ef/train/cpp)
+
+- [Stream 14](https://youtu.be/49sWss63oFg)
     - [Path Finder #1: can you reach the exit? PROVA DI OTTIMIZZAZIONE](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
 
 - [Stream 13](https://www.youtube.com/watch?v=cczN-T7bu1c&t=3026s)
