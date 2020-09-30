@@ -117,6 +117,14 @@ bool path_finder(string m) {
 int main() {
 
 	path_finder("......\n......\n......\n......\n.....W\n....W.");
+	/*
+	.........
+	.........
+	W.....W...
+	W....W..W.W
+	...WWWWWW..W
+	WWWWWWWWWWW.
+	*/
 	return 0;
 }
 
