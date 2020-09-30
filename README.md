@@ -7,8 +7,19 @@
  - [giovanniraserafarra](https://www.codewars.com/users/giovanniraserafarra)
 
 # Descrizione
+
+- [Stream 15](https://youtu.be/1HpwYw8crsw)
+    - [Path Finder #1: can you reach the exit? FALLIMENTO NEL MIGLIORAMENTO](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
+    - [Explosive Sum NON RISOLTO](https://www.codewars.com/kata/52ec24228a515e620b0005ef/train/cpp)
+
+- [Stream 14](https://youtu.be/49sWss63oFg)
+    - [Path Finder #1: can you reach the exit? PROVA DI OTTIMIZZAZIONE](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
+
+- [Stream 13](https://www.youtube.com/watch?v=cczN-T7bu1c&t=3026s)
+    - [Path Finder #1: can you reach the exit? RISOLTO](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
+    
 - [Stream 12](https://www.youtube.com/watch?v=rbAAwXVXC_8)
-    - [Path Finder #1: can you reach the exit?](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
+    - [Path Finder #1: can you reach the exit? NON ROSOLTO](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
     - [Pick peaks](https://www.codewars.com/kata/5279f6fe5ab7f447890006a7)
 
 - [Stream 11](https://youtu.be/UYKXoIziOys)
