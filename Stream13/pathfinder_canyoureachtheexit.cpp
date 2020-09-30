@@ -20,7 +20,7 @@ using pos = pair<int, int>;
 //Rappresentazione deli nodi
 using vnode = vector<pos>;
 enum Color {
-	BIANCO, GRIGIO, NERO
+	BIANCO, BLU, VUOLA
 };
 
 vnode findadix(pos node, vector<string> maze) {
@@ -41,20 +41,20 @@ vnode findadix(pos node, vector<string> maze) {
 }
 
 bool path_finder(string m) {
-	// TODO: Determine whether one can reach the exit at (n - 1, n - 1)
-	// starting from (0, 0) in a n × n maze (represented as a string)
-	// and return a boolean value accordingly
-	
 	// Ho un grafo non orientato e devo trovare la strada per arrivare alla fine
-	// Eseguo bfs e se dalla fine all'inizio non ci sono strade allora non 
+	// Eseguo bfs e se dalla fine  non ci sono strade allora non 
 	// ho strade possibili
+
+	//Parsing della stringa
 	vector<string> maze{};
 	istringstream ss{m};
 	string s;
 	while (ss >> s) maze.push_back(s);
 	int len = maze.size();
-
 	int V = maze.size() * maze.size();
+	//Fine parsing
+
+
 	auto comp_pos = [](pos& p1, pos& p2) {return p1.first == p2.first && p1.second == p2.second; };
 	auto find = [&comp_pos](pos& node, vnode& nodes) {
 		int i = 0;
@@ -64,28 +64,37 @@ bool path_finder(string m) {
 		}
 		return -1;
 	};
+	//Inizializzo le strutture che mi servono per eseguire BFS
 	Color* color = new Color[V];
-	int* PGR = new int[V];
+	int* PGR = new int[V];			//NON CI SERVE
 	int* D = new int[V];
 	queue<pos> Q{};
+
+	//Inizializzazioni delle strutture
 	vnode nodes{};
 	for (int y = 0; y < maze.size(); y++) {
 		for (int x = 0; x < maze.size(); x++) {
 			nodes.push_back({x, y});
 		}
 	}
-	//Inizializzazione delle strutture
 	for (int i = 1; i < V; i++) {
 		color[i] = Color::BIANCO;
 		PGR[i] = -1;
 		D[i] = INT_MAX;
 	}
-
 	color[0] = Color::GRIGIO;
 	PGR[0] = -1;
 	D[0] = 0;
 	Q.push(nodes[0]);
 
+	//Abbiamo a disposizione
+	/*
+	un vettore che ci dice se abbiamo gia calpestato una cella --> COLOR
+	un vettore che ci dice a quanta distanza è una certa cella --> D  (distance)
+
+	Abbiamo una CODA (queue) che ci permette di salvarci i nodi che dobbiamo calpestare e che abbiamo visto
+
+	*/
 
 	while (!Q.empty()) {
 		//Estraggo l'elemento da analizzare
@@ -97,7 +106,7 @@ bool path_finder(string m) {
 			pos v = adix[pos_i];
 			int pos_v = find(v, nodes);
 			if (color[pos_v] == Color::BIANCO) {
-				color[pos_v] = Color::GRIGIO;
+				color[pos_v] = Color::BLU;
 				D[pos_v] = D[pos_u]+1;
 				PGR[pos_v] = pos_u;
 				Q.push(v);
@@ -107,11 +116,12 @@ bool path_finder(string m) {
 		//cout << Q.size() << endl;
 		//cout << u.first << "-" << u.second << endl;
 		Q.pop();
-		color[pos_u] = Color::NERO;
+		color[pos_u] = Color::VIOLA;
 	}
 
 	//Controllo se è raggiungibile
-	return !(D[V-1] == INT_MAX);
+	#define NONESISTENTE INT_MAX
+	return !(D[V-1] == NONESISTENTE);
 }
 
 int main() {
