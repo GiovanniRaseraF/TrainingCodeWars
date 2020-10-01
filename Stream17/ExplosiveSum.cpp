@@ -4,18 +4,22 @@ using namespace std;
 
 using ull = unsigned long long;
 
-ull pk(ull n, ull k, int& volte) {
-    if (k < 0) return 0;
-    if (n == 0 && k == 0) return 1;
-    if ((n <= 0 || k <= 0) && ((n == 0 && k != 0) || (n != 0 && k == 0) || (n != 0 && k != 0))) return 0;
-    return pk(n - k, k, volte) + pk(n - 1, k - 1, volte);
+ull pk(ull n, ull k) {
+    // Base cases
+    if (n == 0 || k == 0 || k > n)
+        return 0;
+    if (k == 1 || k == n)
+        return 1;
+
+    // S(n+1, k) = k*S(n, k) + S(n, k-1)
+    return  k * pk(n - 1, k) + pk(n - 1, k - 1);
 }
 
 ull exp_sum(ull n) {
     ull sum = 0;
     int volte = 0;
     for (ull k = 1; k <= n; k++) {
-        sum += pk(n, k, volte);
+        sum += pk(n, k);
     }
 
     cout << sum <<" "<< volte << endl;

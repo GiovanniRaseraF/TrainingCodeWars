@@ -47,14 +47,14 @@ void exp_sum_n(int n, ull& ret){
 
 ull exp_sum(int n) {
     if (n == 0)  return 1;
-    cout << n<<endl;
+    //cout << n<<endl;
     ull ret = 0;
     exp_sum_n(n, ret);
     return ret;
 }
 
 int main() {
-    int n = 0;
+    int n = 90;
     while (true) {
         cout << n << " " << exp_sum(n) << endl;
         n++;
