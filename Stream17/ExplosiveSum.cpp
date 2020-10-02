@@ -12,17 +12,15 @@ ull pk(ull n, ull k) {
         return 1;
 
     // S(n+1, k) = k*S(n, k) + S(n, k-1)
-    return  k * pk(n - 1, k) + pk(n - 1, k - 1);
+    return  pk(n - 1, k) + pk(n - 1, k - 1);
 }
 
 ull exp_sum(ull n) {
     ull sum = 0;
-    int volte = 0;
+    
     for (ull k = 1; k <= n; k++) {
         sum += pk(n, k);
     }
-
-    cout << sum <<" "<< volte << endl;
 
     return sum;
 }
