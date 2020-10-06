@@ -9,10 +9,10 @@
 
 using namespace std;
 
-using ull = long long;
+using ull = unsigned long long;
 
 ull exp_sum_p(ull n, ull m) {
-	if (n <= 0) return 0;
+	if (n == 0) return 1;
 	if (n == 1) return 1;
 
 	ull sum = 0;
@@ -32,8 +32,8 @@ ull exp_sum(ull n) {
 }
 
 int main() {
-	for (int i = 0; i <= 10; i++) {
-		cout << "i: " << i << " -> " << exp_sum(i) << endl;
+	for (int i = 1; i <= 4; i++) {
+		cout << "i: " << i << " -> " << exp_sum_p(4, i) << endl;
 	}
 	return 0;
 }
