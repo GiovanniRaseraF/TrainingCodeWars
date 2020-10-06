@@ -8,6 +8,8 @@
 
 # Descrizione
 
+- TODO !!!!! Streaming 16 e 17 --- 20 
+
 - [Stream 15](https://youtu.be/1HpwYw8crsw)
     - [Path Finder #1: can you reach the exit? FALLIMENTO NEL MIGLIORAMENTO](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
     - [Explosive Sum NON RISOLTO](https://www.codewars.com/kata/52ec24228a515e620b0005ef/train/cpp)
