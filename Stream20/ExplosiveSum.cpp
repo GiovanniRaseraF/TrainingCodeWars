@@ -31,8 +31,8 @@ ull exp_sum(int sum, int largestNumber, ull**& dict) {
         dict[sum][largestNumber] = 1;
         return 1;
     }
-    
-    return exp_sum(sum, largestNumber - 1, dict) + exp_sum(sum - largestNumber, largestNumber, dict);;
+    dict[sum][largestNumber] = exp_sum(sum, largestNumber - 1, dict) + exp_sum(sum - largestNumber, largestNumber, dict);
+    return dict[sum][largestNumber];
 }
 
 ull exp_sum(int sum) {
