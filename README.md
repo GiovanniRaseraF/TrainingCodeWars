@@ -8,7 +8,14 @@
 
 # Descrizione
 
-- TODO !!!!! Streaming 16 e 17 --- 20 
+- [Stream 20](https://www.youtube.com/watch?v=aVv8TQ6xqZI)
+    - [Explosive Sum RISOLTO](https://www.codewars.com/kata/52ec24228a515e620b0005ef/train/cpp)
+
+- [Stream 17](https://www.youtube.com/watch?v=ps1-r0GIzfg)
+    - [Explosive Sum NON RISOLTO](https://www.codewars.com/kata/52ec24228a515e620b0005ef/train/cpp)
+
+- [Stream 16](https://www.youtube.com/watch?v=WXY6HbQded4)
+    - [Explosive Sum NON RISOLTO](https://www.codewars.com/kata/52ec24228a515e620b0005ef/train/cpp)
 
 - [Stream 15](https://youtu.be/1HpwYw8crsw)
     - [Path Finder #1: can you reach the exit? FALLIMENTO NEL MIGLIORAMENTO](https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/cpp)
