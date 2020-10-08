@@ -13,6 +13,8 @@ ull exp_sum(int sum, int largestNumber, ull**& dict) {
     //Caso base
     assert(largestNumber >= 0);
     if (sum < 0) return 0;
+    
+    //Se ho gia calcolato il valore dell'elemento allora ritorno il risultato
     if (dict[sum][largestNumber] != 0) {
         calcolato++;
         return dict[sum][largestNumber];
