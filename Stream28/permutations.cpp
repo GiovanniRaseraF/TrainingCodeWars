@@ -90,20 +90,6 @@ vector<string> permutations(string s){
 
 int main(){
     cout<<permutations("cerjjsx").size();
-    /*
-    node* a = insert(nullptr, "hello");
-    insert(a, "ciao");
-    insert(a, "boh");
-    insert(a, "ciao");
-
-    vector<string> b{};
-
-    create_vet(a, b);
-
-    for(string s : b){
-        cout<<s<<" ";
-    }
-*/
     return 0;
 }
 

@@ -2,16 +2,19 @@
 #include <set>
 #include <vector>
 #include <string>
+#include <math.h>
 using namespace std;
 
 class SumOfDivided{
 public:
     static void find_factors(int n, vector<int> &ret){
+        n = abs(n);
         int first = 2;
         while(first <= n){
             if(n % first == 0){
                 ret.push_back(first);
-                n = n / first;
+                while(n % first == 0) 
+                    n = n / first;
             }
             first++;
         }
@@ -27,12 +30,25 @@ public:
             }
         }
 
+        string ret = "";
+        for(int p : primes){
+            int sum = 0;
+            for(int val : lst){
+                if(abs(val) % p == 0){
+                    sum += val;
+                }
+            }
+            ret += "(" + to_string(p) + " " + to_string(sum) + ")";
+        }
 
-
+        return ret;
     }
 };
 
 
 int main(){
+    vector<int> a{15, 30, -45};
+    string s = SumOfDivided::sumOfDivided(a);
+    cout<<s;
     return 0;
 }
