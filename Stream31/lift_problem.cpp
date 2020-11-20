@@ -64,10 +64,12 @@ std::vector<int> the_lift(std::vector<peoples> queues,const int capacity) {
         }
 
         //Now we need to move
+        cout<<"Going to move from: "<<current_floor<<" direction: "<<direction<<endl;
         move_or_change_direction(seats, current_floor, 
                                 direction,
                                 floors,
                                 queues);
+        cout<<"Moved to: "<<current_floor<<" direction: "<<direction<<endl;
     }
 
     return stopped_at;
@@ -211,9 +213,8 @@ void move_or_change_direction(peoples& seats, int& current_floor,
             //Im not in the top
             bool there_is_someone = false;
             for(int i = current_floor + 1; i < floors; i++) 
-                if(!queues[current_floor].empty()){
+                if(!queues[i].empty()){
                     there_is_someone = true;
-                    continue;
                 }
 
             if(there_is_someone){
@@ -221,8 +222,8 @@ void move_or_change_direction(peoples& seats, int& current_floor,
                 current_floor++;
             }else{
                 //Noone to pickup
-                current_floor--;
                 direction = DOWN;
+                current_floor--;
             }
         }
     }else if(direction == DOWN){
@@ -235,7 +236,7 @@ void move_or_change_direction(peoples& seats, int& current_floor,
             //Im not in the floor
             bool there_is_someone = false;
             for(int i = current_floor - 1; i >= 0; i--) 
-                if(!queues[current_floor].empty()){
+                if(!queues[i].empty()){
                     there_is_someone = true;
                     continue;
                 }
@@ -256,3 +257,35 @@ void move_or_change_direction(peoples& seats, int& current_floor,
 }
 
 
+
+int main(){
+    std::vector<std::vector<int>> queues; std::vector<int> result;
+    queues = { {}, {}, {5,5,5}, {}, {}, {}, {} };
+    result = {0, 2, 5, 0};
+    for(auto i : the_lift(queues, 5)){
+        cout<<i<<"  ";
+    }
+    cout<<endl;
+
+    queues = { {}, {}, {1,1}, {}, {}, {}, {} };
+    result = {0, 2, 1, 0};        
+    for(auto i : the_lift(queues, 5)){
+        cout<<i<<"  ";
+    }
+    cout<<endl;
+
+    queues = { {}, {3}, {4}, {}, {5}, {}, {} };
+    result = {0, 1, 2, 3, 4, 5, 0};
+    for(auto i : the_lift(queues, 5)){
+        cout<<i<<"  ";
+    }
+    cout<<endl;
+
+    queues = { {}, {0}, {}, {}, {2}, {3}, {} };
+    result = {0, 5, 4, 3, 2, 1, 0};
+    for(auto i : the_lift(queues, 5)){
+        cout<<i<<"  ";
+    }
+    cout<<endl;
+    return 0;
+}
