@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <iostream>
 using namespace std;
 
 vector<string> create_adix(string observed){
@@ -41,4 +42,10 @@ vector<string> get_pins(string observed) {
     }
 
     return ret;
+}
+
+
+int main(){
+    std::cout<<"hello world!!";
+    return 0;
 }
