@@ -10,3 +10,4 @@ string find_screen_height(int wi, const string &r){
     s >> w >> c >> h;
     return to_string(wi) + "x" + to_string((int)((float)wi / (float)w * h));
 }
+
